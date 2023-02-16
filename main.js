@@ -1,1 +1,12 @@
-<script language="JavaScript"> day = new Date(); hour = day.getHours(); if (hour>=5 && hour<12) greeting = "Доброе утро"; else { if (hour>=12 && hour<18) greeting = "Добрый день"; else { if (hour>=18 && hour<24) greeting = "Добрый вечер"; else { if (hour>=0 && hour<5) greeting = "Доброй ночи"; } } } document.write(greeting); 
+const hour = new Date().getHours();
+const greeting = document.querySelector('.time_allert');
+
+if (hour >= 18) {
+  greeting.textContent = 'Добрый вечер!';
+} else if (hour >= 12) {
+  greeting.textContent = 'Добрый день!';
+} else if (hour >= 5) {
+  greeting.textContent = 'Доброе утро!';
+} else {
+  greeting.textContent = 'Доброй ночи!';
+}

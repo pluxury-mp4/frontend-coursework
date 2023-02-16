@@ -54,7 +54,7 @@ h3 {
 
 .hero_container{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(290px, 1fr)) ;
+  grid-template-columns: repeat(auto-fit,minmax(min(100%, 290px), 1fr)) ;
   grid-gap: 20px ;
 }
 
@@ -135,6 +135,13 @@ margin-bottom: 20px;
 
     }
   }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero_box,
+  .hero_box-img {
+    animation: none;
+  }
+}
 
   @keyframes ava-animate {
     0% {
